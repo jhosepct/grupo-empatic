@@ -1,0 +1,200 @@
+<!-- Hero Section -->
+<section class="hero min-h-screen bg-base-100 relative overflow-hidden">
+  <!-- Background Abstract Shapes (Tailwind) -->
+  <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-primary/10 blur-3xl"></div>
+  <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-secondary/10 blur-3xl"></div>
+
+  <div class="hero-content flex-col lg:flex-row-reverse z-10">
+    <div class="lg:w-1/2 flex justify-center">
+      <!-- Placeholder for Hero Image -->
+      <div
+        class="bg-gradient-to-tr from-primary to-secondary p-1 rounded-3xl rotate-3 hover:rotate-0 transition-transform duration-500 shadow-2xl">
+        <div
+          class="w-full h-96 bg-base-200 rounded-2xl flex items-center justify-center relative overflow-hidden group">
+          <span class="text-4xl">
+            <img src="/image.png" alt="">
+          </span>
+          <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all"></div>
+        </div>
+      </div>
+    </div>
+    <div class="lg:w-1/2 text-center lg:text-left">
+      <h1 class="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
+        Consultorías que <span
+          class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">maximizan</span> tu impacto
+      </h1>
+      <p class="py-6 text-lg text-base-content/80">
+        Grupo EMPATIC es una consultora de impacto social que ofrece soluciones estratégicas, tecnológicas y sostenibles
+        para transformar realidades.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+        <button class="btn btn-primary rounded-full px-8 text-white shadow-lg lg:btn-lg hover:brightness-110">
+          Quiero una cotización
+        </button>
+        <button class="btn btn-outline btn-secondary rounded-full px-8 lg:btn-lg hover:text-white">
+          Nuestros Servicios
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Methodology / Timeline Section -->
+<section id="methodology-section" class="py-20 bg-base-200 hidden-for-animation">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-16">Nuestra <span class="text-primary">Metodología</span></h2>
+
+    <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
+      <li>
+        <div class="timeline-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-primary">
+            <path fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+              clip-rule="evenodd" />
+          </svg>
+        </div>
+        <div
+          class="timeline-start md:text-end mb-10 md:mb-0 bg-base-100 p-6 rounded-xl shadow-lg hover:shadow-primary/20 transition-all border-l-4 border-primary">
+          <time class="font-mono italic text-secondary">Fase 1</time>
+          <div class="text-xl font-black mb-2">Diagnóstico Estratégico</div>
+          Analizamos a profundidad el contexto y las necesidades para identificar las oportunidades de mayor impacto.
+        </div>
+        <hr class="bg-primary" />
+      </li>
+      <li>
+        <hr class="bg-primary" />
+        <div class="timeline-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+            class="h-5 w-5 text-secondary">
+            <path fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+              clip-rule="evenodd" />
+          </svg>
+        </div>
+        <div
+          class="timeline-end mb-10 md:mb-0 bg-base-100 p-6 rounded-xl shadow-lg hover:shadow-secondary/20 transition-all border-r-4 md:border-r-0 md:border-l-4 border-secondary">
+          <time class="font-mono italic text-secondary">Fase 2</time>
+          <div class="text-xl font-black mb-2">Plan de Acción Personalizado</div>
+          Diseñamos soluciones a medida, integrando tecnología, sostenibilidad y enfoque humano.
+        </div>
+        <hr class="bg-secondary" />
+      </li>
+      <li>
+        <hr class="bg-secondary" />
+        <div class="timeline-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-accent">
+            <path fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+              clip-rule="evenodd" />
+          </svg>
+        </div>
+        <div
+          class="timeline-start md:text-end mb-10 md:mb-0 bg-base-100 p-6 rounded-xl shadow-lg hover:shadow-accent/20 transition-all border-l-4 border-accent">
+          <time class="font-mono italic text-accent">Fase 3</time>
+          <div class="text-xl font-black mb-2">Implementación y Acompañamiento</div>
+          Ejecutamos el plan contigo y monitoreamos los resultados para asegurar la sostenibilidad del éxito.
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- Values Grid -->
+<section id="values-section" class="py-20 bg-base-100 hidden-for-animation">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-12">Nuestros <span class="text-secondary">Valores</span></h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Value 1 -->
+      <div class="card bg-base-200 shadow-xl hover:-translate-y-2 transition-transform duration-300">
+        <figure class="px-10 pt-10 text-primary">
+          <!-- Icon Placeholder -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+          </svg>
+        </figure>
+        <div class="card-body items-center text-center">
+          <h3 class="card-title">Empatía</h3>
+          <p>Ponemos a las personas en el centro de cada decisión.</p>
+        </div>
+      </div>
+
+      <!-- Value 2 -->
+      <div class="card bg-base-200 shadow-xl hover:-translate-y-2 transition-transform duration-300">
+        <figure class="px-10 pt-10 text-secondary">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        </figure>
+        <div class="card-body items-center text-center">
+          <h3 class="card-title">Innovación</h3>
+          <p>Buscamos soluciones creativas para problemas complejos.</p>
+        </div>
+      </div>
+
+      <!-- Value 3 -->
+      <div class="card bg-base-200 shadow-xl hover:-translate-y-2 transition-transform duration-300">
+        <figure class="px-10 pt-10 text-accent">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </figure>
+        <div class="card-body items-center text-center">
+          <h3 class="card-title">Sostenibilidad</h3>
+          <p>Generamos impacto positivo a largo plazo.</p>
+        </div>
+      </div>
+
+      <!-- Value 4 -->
+      <div class="card bg-base-200 shadow-xl hover:-translate-y-2 transition-transform duration-300">
+        <figure class="px-10 pt-10 text-success">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 005.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+        </figure>
+        <div class="card-body items-center text-center">
+          <h3 class="card-title">Colaboración</h3>
+          <p>Creemos en el poder de trabajar juntos.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials-section" class="py-20 bg-base-200 hidden-for-animation">
+  <div class="container mx-auto px-4 relative">
+    <h2 class="text-4xl font-bold text-center mb-16">Lo que dicen de <span class="text-primary">nosotros</span></h2>
+    <div #carousel class="carousel carousel-center w-full p-4 space-x-4 bg-neutral rounded-box scroll-smooth">
+      <div *ngFor="let testimonial of testimonials; index as i" id="item{{ i }}" class="carousel-item">
+        <div class="card bg-base-100 shadow-lg w-80 md:w-96">
+          <div class="card-body">
+            <div class="flex items-center mb-4">
+              <div class="avatar">
+                <div class="w-16 rounded-full ring {{ testimonial.ringColor }} ring-offset-base-100 ring-offset-2">
+                  <img [src]="testimonial.avatar" alt="Avatar" />
+                </div>
+              </div>
+              <div class="ml-4">
+                <h3 class="font-bold">{{ testimonial.author }}</h3>
+                <p class="text-sm opacity-60">{{ testimonial.title }}</p>
+              </div>
+            </div>
+            <p>"{{ testimonial.quote }}"</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 mt-8">
+      <button (click)="carousel.scrollBy({ left: -300, behavior: 'smooth' })" class="btn btn-circle">❮</button>
+      <button (click)="carousel.scrollBy({ left: 300, behavior: 'smooth' })" class="btn btn-circle">❯</button>
+    </div>
+  </div>
+</section>
