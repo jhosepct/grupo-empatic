@@ -71,11 +71,11 @@
   }
 
   .timeline-start .sub-steps {
-    left: 110%;
+    left: 105%;
   }
 
   .timeline-end .sub-steps {
-    right: 110%;
+    right: 105%;
   }
 
   .timeline-item:hover .sub-steps {
