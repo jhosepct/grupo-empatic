@@ -7,7 +7,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "acciones-empaticas": {
+    "grupo-empatic": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -62,10 +62,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "acciones-empaticas:build:production"
+              "buildTarget": "grupo-empatic:build:production"
             },
             "development": {
-              "buildTarget": "acciones-empaticas:build:development"
+              "buildTarget": "grupo-empatic:build:development"
             }
           },
           "defaultConfiguration": "development"

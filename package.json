@@ -1,5 +1,5 @@
 {
-  "name": "acciones-empaticas",
+  "name": "grupo-empatic",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:acciones-empaticas": "node dist/acciones-empaticas/server/server.mjs"
+    "serve:ssr:grupo-empatic": "node dist/grupo-empatic/server/server.mjs"
   },
   "prettier": {
     "printWidth": 100,

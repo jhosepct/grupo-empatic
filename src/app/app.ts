@@ -18,5 +18,5 @@ import { FooterComponent } from './shared/components/footer/footer.component';
   `
 })
 export class App {
-    title = 'acciones-empaticas';
+    title = 'grupo-empatic';
 }
