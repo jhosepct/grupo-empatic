@@ -1,0 +1,1214 @@
+{
+    "pipes": [],
+    "interfaces": [
+        {
+            "name": "User",
+            "id": "interface-User-d4821beac0e4a852e513391b7470981c4353fdd95a18628bb68136c8695b489ee15b926e2e5031bc26cf30e1508e0a362c3ee13a06734702b4d15af140e485d5",
+            "file": "src/stories/user.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface User {\n  name: string;\n}\n",
+            "properties": [
+                {
+                    "name": "name",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 172,
+            "methods": [],
+            "extends": []
+        }
+    ],
+    "injectables": [],
+    "guards": [],
+    "interceptors": [],
+    "classes": [],
+    "directives": [],
+    "components": [
+        {
+            "name": "App",
+            "id": "component-App-50e355b0b98cd36efb5c05acc777bf6e11512f2bba3775e7c45f9fc927162a7b0749d12d12fcc3766d53d292fde14a7b761b38553a8b444f951a205bbdded1c8",
+            "file": "src/app/app.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-root",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<div class=\"min-h-screen flex flex-col font-sans text-base-content bg-base-100\">\n  <app-header></app-header>\n  <main class=\"flex-grow\">\n    <router-outlet></router-outlet>\n  </main>\n  <app-footer></app-footer>\n</div>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "title",
+                    "defaultValue": "'grupo-empatic'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 21
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "RouterOutlet"
+                },
+                {
+                    "name": "HeaderComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "FooterComponent",
+                    "type": "component"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\nimport { RouterOutlet } from '@angular/router';\nimport { HeaderComponent } from './shared/components/header/header.component';\nimport { FooterComponent } from './shared/components/footer/footer.component';\n\n@Component({\n    selector: 'app-root',\n    standalone: true,\n    imports: [RouterOutlet, HeaderComponent, FooterComponent],\n    template: `\n    <div class=\"min-h-screen flex flex-col font-sans text-base-content bg-base-100\">\n      <app-header></app-header>\n      <main class=\"flex-grow\">\n        <router-outlet></router-outlet>\n      </main>\n      <app-footer></app-footer>\n    </div>\n  `\n})\nexport class App {\n    title = 'grupo-empatic';\n}",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": []
+        },
+        {
+            "name": "ButtonComponent",
+            "id": "component-ButtonComponent-d7bf0323e6da130e2609e2af0117b4a8d7cd874132206af50bf43dfc37044485fe50f2867ea76525730dd195b9b95a43802a12dadc6ad5cd7bf2faa07f19f0da",
+            "file": "src/stories/button.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-button",
+            "styleUrls": [
+                "./button.css"
+            ],
+            "styles": [],
+            "template": " <button  type=\"button\"\n  (click)=\"onClick.emit($event)\"\n  [ngClass]=\"classes\"\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\n>\n  {{ label }}\n</button>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "backgroundColor",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\nWhat background color to use",
+                    "description": "<p>What background color to use</p>\n",
+                    "line": 25,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "'Button'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "pos": 760,
+                            "end": 773,
+                            "kind": 328,
+                            "id": 0,
+                            "flags": 16842752,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "tagName": {
+                                "pos": 761,
+                                "end": 769,
+                                "kind": 80,
+                                "id": 0,
+                                "flags": 16842752,
+                                "transformFlags": 0,
+                                "escapedText": "required"
+                            },
+                            "comment": ""
+                        }
+                    ],
+                    "rawdescription": "\n\nButton contents\n\n",
+                    "description": "<p>Button contents</p>\n",
+                    "line": 37,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "primary",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\nIs this the principal call to action on the page?",
+                    "description": "<p>Is this the principal call to action on the page?</p>\n",
+                    "line": 21,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "size",
+                    "defaultValue": "'medium'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\nHow large should the button be?",
+                    "description": "<p>How large should the button be?</p>\n",
+                    "line": 29,
+                    "type": "\"small\" | \"medium\" | \"large\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onClick",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\nOptional click handler",
+                    "description": "<p>Optional click handler</p>\n",
+                    "line": 41,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'storybook-button',\n  standalone: true,\n  imports: [CommonModule],\n  template: ` <button\n  type=\"button\"\n  (click)=\"onClick.emit($event)\"\n  [ngClass]=\"classes\"\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\n>\n  {{ label }}\n</button>`,\n  styleUrls: ['./button.css'],\n})\nexport class ButtonComponent {\n  /** Is this the principal call to action on the page? */\n  @Input()\n  primary = false;\n\n  /** What background color to use */\n  @Input()\n  backgroundColor?: string;\n\n  /** How large should the button be? */\n  @Input()\n  size: 'small' | 'medium' | 'large' = 'medium';\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'Button';\n\n  /** Optional click handler */\n  @Output()\n  onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';\n\n    return ['storybook-button', `storybook-button--${this.size}`, mode];\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".storybook-button {\n  display: inline-block;\n  cursor: pointer;\n  border: 0;\n  border-radius: 3em;\n  font-weight: 700;\n  line-height: 1;\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n}\n.storybook-button--primary {\n  background-color: #555ab9;\n  color: white;\n}\n.storybook-button--secondary {\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\n  background-color: transparent;\n  color: #333;\n}\n.storybook-button--small {\n  padding: 10px 16px;\n  font-size: 12px;\n}\n.storybook-button--medium {\n  padding: 11px 20px;\n  font-size: 14px;\n}\n.storybook-button--large {\n  padding: 12px 24px;\n  font-size: 16px;\n}\n",
+                    "styleUrl": "./button.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 43
+                    }
+                }
+            }
+        },
+        {
+            "name": "ConsultoriasComponent",
+            "id": "component-ConsultoriasComponent-786d58f994f93084c772809e6ed9eb95f22a2375a8e45d9abaad9cf81642f8ec36911f70b61c26f54ac2e660858dc05fbb1eac25c52ed66b407d863bba79e646",
+            "file": "src/app/features/consultorias/consultorias.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-consultorias",
+            "styleUrls": [
+                "./consultorias.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./consultorias.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\n\r\n@Component({\r\n    selector: 'app-consultorias',\r\n    standalone: true,\r\n    imports: [CommonModule],\r\n    templateUrl: './consultorias.component.html',\r\n    styleUrls: ['./consultorias.component.css']\r\n})\r\nexport class ConsultoriasComponent { }\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./consultorias.component.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<section class=\"py-20 bg-base-100 min-h-screen\">\n      <div class=\"container mx-auto px-4\">\n        <h1 class=\"text-4xl font-bold text-center mb-16\">Nuestras <span class=\"text-secondary\">Consultorías</span></h1>\n        \n        <div class=\"grid grid-cols-1 md:grid-cols-3 gap-8\">\n            <!-- Service 1 -->\n            <div class=\"card bg-base-200 shadow-xl hover:shadow-2xl transition-all duration-300 border-t-4 border-primary\">\n                <div class=\"card-body\">\n                    <h2 class=\"card-title text-2xl mb-4 text-primary\">EMPATIC Sostenibilidad</h2>\n                    <p class=\"mb-6 opacity-80\">Impulsamos estrategias y soluciones sostenibles que generan valor compartido para tu organización y la sociedad.</p>\n                    <div class=\"card-actions justify-end mt-auto\">\n                        <button class=\"btn btn-primary btn-outline w-full group\">\n                            Diagnóstico GRATUITO\n                            <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-4 w-4 inline-block ml-2 group-hover:translate-x-1 transition-transform\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M14 5l7 7m0 0l-7 7m7-7H3\" /></svg>\n                        </button>\n                    </div>\n                </div>\n            </div>\n\n            <!-- Service 2 -->\n            <div class=\"card bg-base-200 shadow-xl hover:shadow-2xl transition-all duration-300 border-t-4 border-secondary\">\n                <div class=\"card-body\">\n                    <h2 class=\"card-title text-2xl mb-4 text-secondary\">EMPATIC Financiamiento</h2>\n                    <p class=\"mb-6 opacity-80\">Asesoramos en la gestión y obtención de recursos económicos para garantizar la viabilidad de tus proyectos de impacto.</p>\n                    <div class=\"card-actions justify-end mt-auto\">\n                        <button class=\"btn btn-secondary btn-outline w-full group\">\n                            Diagnóstico GRATUITO\n                            <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-4 w-4 inline-block ml-2 group-hover:translate-x-1 transition-transform\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M14 5l7 7m0 0l-7 7m7-7H3\" /></svg>\n                        </button>\n                    </div>\n                </div>\n            </div>\n\n            <!-- Service 3 -->\n            <div class=\"card bg-base-200 shadow-xl hover:shadow-2xl transition-all duration-300 border-t-4 border-accent\">\n                <div class=\"card-body\">\n                    <h2 class=\"card-title text-2xl mb-4 text-accent\">EMPATIC Tecnología</h2>\n                    <p class=\"mb-6 opacity-80\">Impulsamos la innovación tecnológica para optimizar procesos y escalar el alcance de tus iniciativas sociales.</p>\n                    <div class=\"card-actions justify-end mt-auto\">\n                        <button class=\"btn btn-accent btn-outline w-full group\">\n                            Diagnóstico GRATUITO\n                            <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-4 w-4 inline-block ml-2 group-hover:translate-x-1 transition-transform\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M14 5l7 7m0 0l-7 7m7-7H3\" /></svg>\n                        </button>\n                    </div>\n                </div>\n            </div>\n        </div>\n      </div>\n    </section>"
+        },
+        {
+            "name": "EmpatheticActionsComponent",
+            "id": "component-EmpatheticActionsComponent-daf379d919b23b526cbe4165097b39e12bbc9dc38b9700b920abb75997f3d0542ee4da85a5b0b5715557e6673f84cd8821ca80407c670020bad1d172266dbcd7",
+            "file": "src/app/features/empathetic-actions/empathetic-actions.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-empathetic-actions",
+            "styleUrls": [
+                "./empathetic-actions.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./empathetic-actions.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\n\r\n@Component({\r\n    selector: 'app-empathetic-actions',\r\n    standalone: true,\r\n    imports: [CommonModule],\r\n    templateUrl: './empathetic-actions.component.html',\r\n    styleUrls: ['./empathetic-actions.component.css']\r\n})\r\nexport class EmpatheticActionsComponent { }\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./empathetic-actions.component.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<section class=\"py-12 bg-base-100 min-h-screen\">\n      <!-- Title Section -->\n      <div class=\"container mx-auto px-4 text-center mb-16\">\n        <h1 class=\"text-5xl font-bold mb-4\"><span class=\"text-primary\">Acciones</span> Empáticas</h1>\n        <p class=\"text-xl max-w-2xl mx-auto opacity-80\">\n          Plataforma de impacto social comprometida con el desarrollo integral del Perú y la formación de agentes de cambio.\n        </p>\n      </div>\n\n      <!-- Stats Counters -->\n      <div class=\"container mx-auto px-4 mb-20\">\n        <div class=\"stats stats-vertical lg:stats-horizontal shadow-2xl bg-base-200 w-full overflow-hidden border border-base-300\">\n  \n          <div class=\"stat place-items-center hover:bg-base-300 transition-colors\">\n            <div class=\"stat-title text-primary font-bold tracking-wider\">VOLUNTARIOS</div>\n            <div class=\"stat-value text-5xl\">150+</div>\n            <div class=\"stat-desc\">Comprometidos con el cambio</div>\n          </div>\n          \n          <div class=\"stat place-items-center hover:bg-base-300 transition-colors\">\n            <div class=\"stat-title text-secondary font-bold tracking-wider\">BENEFICIARIOS</div>\n            <div class=\"stat-value text-5xl\">150+</div>\n            <div class=\"stat-desc\">Personas impactadas</div>\n          </div>\n          \n          <div class=\"stat place-items-center hover:bg-base-300 transition-colors\">\n            <div class=\"stat-title text-accent font-bold tracking-wider\">ACCIONES</div>\n            <div class=\"stat-value text-5xl\">50+</div>\n            <div class=\"stat-desc\">De alto impacto</div>\n          </div>\n          \n          <div class=\"stat place-items-center hover:bg-base-300 transition-colors\">\n            <div class=\"stat-title text-success font-bold tracking-wider\">REGIONES</div>\n            <div class=\"stat-value text-5xl\">5</div>\n            <div class=\"stat-desc\">Alcance nacional</div>\n          </div>\n          \n        </div>\n      </div>\n\n      <!-- Lines of Action -->\n      <div class=\"container mx-auto px-4\">\n        <h2 class=\"text-3xl font-bold text-center mb-12\">Nuestras Líneas de Acción</h2>\n        <div class=\"grid grid-cols-1 lg:grid-cols-2 gap-8 items-center\">\n            \n            <!-- Voluntariado -->\n            <div class=\"card lg:card-side bg-base-200 shadow-xl\">\n              <figure class=\"lg:w-1/3 bg-neutral flex justify-center items-center min-h-[200px]\">\n                  <span class=\"text-6xl\">🤝</span>\n              </figure>\n              <div class=\"card-body\">\n                <h2 class=\"card-title text-2xl text-primary\">Voluntariado Empático</h2>\n                <p>\n                  Movilizamos talento humano para ejecutar proyectos sociales en comunidades vulnerables.\n                  Fomentamos el liderazgo y la conciencia social en cada voluntario.\n                </p>\n                <div class=\"card-actions justify-end\">\n                  <button class=\"btn btn-primary btn-sm\">Únete al equipo</button>\n                </div>\n              </div>\n            </div>\n\n            <!-- Programas -->\n            <div class=\"card lg:card-side bg-base-200 shadow-xl\">\n              <figure class=\"lg:w-1/3 bg-neutral flex justify-center items-center min-h-[200px]\">\n                  <span class=\"text-6xl\">🎓</span>\n              </figure>\n              <div class=\"card-body\">\n                <h2 class=\"card-title text-2xl text-secondary\">Programas de Formación</h2>\n                <ul class=\"list-disc list-inside opacity-80 space-y-1\">\n                    <li><strong class=\"text-accent\">SkillUp:</strong> Desarrollo de habilidades blandas y técnicas.</li>\n                    <li><strong class=\"text-accent\">Líderes:</strong> Formación de gestores de proyectos.</li>\n                    <li><strong class=\"text-accent\">Mentores:</strong> Acompañamiento profesional.</li>\n                </ul>\n                <div class=\"card-actions justify-end\">\n                  <button class=\"btn btn-secondary btn-sm\">Saber más</button>\n                </div>\n              </div>\n            </div>\n\n        </div>\n      </div>\n    </section>"
+        },
+        {
+            "name": "FooterComponent",
+            "id": "component-FooterComponent-2ec5c3aaf9db715bcd7a6e31528d2f06b965e3de065cd07606f2633c777af5a3d1d51c69a2e894c384585c57b19fd28712066406f9a33ffb6468aaf7f9b50776",
+            "file": "src/app/shared/components/footer/footer.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-footer",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<footer class=\"footer p-10 bg-base-200 text-base-content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">\n  <aside>\n    <a routerLink=\"/\" class=\"btn btn-ghost text-xl font-bold mb-2\">\n        <svg width=\"32\" height=\"32\" viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\" class=\"mr-2\">\n            <defs>\n                <linearGradient id=\"grad1\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\">\n                    <stop offset=\"0%\" stop-color=\"#FF6B6B\" />\n                    <stop offset=\"100%\" stop-color=\"#4D96FF\" />\n                </linearGradient>\n                <filter id=\"shadow\" x=\"-20%\" y=\"-20%\" width=\"140%\" height=\"140%\">\n                    <feGaussianBlur in=\"SourceAlpha\" stdDeviation=\"3\"/>\n                    <feOffset dx=\"2\" dy=\"2\" result=\"offsetblur\"/>\n                    <feComponentTransfer>\n                        <feFuncA type=\"linear\" slope=\"0.5\"/>\n                    </feComponentTransfer>\n                    <feMerge>\n                        <feMergeNode/>\n                        <feMergeNode in=\"SourceGraphic\"/>\n                    </feMerge>\n                </filter>\n            </defs>\n            <g filter=\"url(#shadow)\">\n                <path d=\"M50 10 C 20 10, 10 40, 10 50 C 10 90, 50 90, 50 90\" fill=\"none\" stroke=\"url(#grad1)\" stroke-width=\"12\" stroke-linecap=\"round\"/>\n                <path d=\"M50 90 C 80 90, 90 60, 90 50 C 90 10, 50 10, 50 10\" fill=\"none\" stroke=\"url(#grad1)\" stroke-width=\"12\" stroke-linecap=\"round\"/>\n                <circle cx=\"50\" cy=\"50\" r=\"10\" fill=\"url(#grad1)\"/>\n            </g>\n        </svg>\n        <span class=\"text-primary\">GRUPO</span>EMPATIC\n    </a>\n    <p class=\"max-w-xs\">\n      Consultora de impacto social comprometida con el desarrollo integral,\n      generando soluciones estratégicas, innovadoras y sostenibles.\n    </p>\n    <div class=\"mt-4 flex gap-4\">\n        <!-- Social Icons -->\n        <a href=\"https://www.facebook.com/grupoempatic\" target=\"_blank\" class=\"link link-hover text-2xl\">\n          <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"currentColor\" class=\"hover:text-primary transition-colors\"><path d=\"M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z\"></path></svg>\n        </a>\n        <a href=\"https://www.linkedin.com/company/grupo-empatic/\" target=\"_blank\" class=\"link link-hover text-2xl\">\n          <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"currentColor\" class=\"hover:text-primary transition-colors\"><path d=\"M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.98v16h4.98v-8.396c0-2.008 1.12-3.125 2.774-3.125 1.522 0 2.402 1.018 2.402 3.125v8.396h4.98v-8.66c0-3.678-1.92-6.34-5.248-6.34-2.43 0-3.822 1.37-4.432 2.25v-1.99h-4.98v16z\"></path></svg>\n        </a>\n        <a href=\"https://www.instagram.com/grupo.empatic/\" target=\"_blank\" class=\"link link-hover text-2xl\">\n          <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"currentColor\" class=\"hover:text-primary transition-colors\"><path d=\"M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.441 1.441 1.441 1.441-.645 1.441-1.441-.645-1.44-1.441-1.44z\"></path></svg>\n        </a>\n    </div>\n  </aside>\n  <nav>\n    <header class=\"footer-title opacity-100 text-white\">Servicios</header>\n    <a class=\"link link-hover\">Consultorías de Impacto</a>\n    <a class=\"link link-hover\">Acciones Empáticas</a>\n  </nav>\n  <nav>\n    <header class=\"footer-title opacity-100 text-white\">Empresa</header>\n    <a class=\"link link-hover\">Nosotros</a>\n    <a class=\"link link-hover\">Equipo</a>\n    <a class=\"link link-hover\">Novedades</a>\n    <a class=\"link link-hover\">Trabaja con nosotros</a>\n  </nav>\n  <nav>\n    <header class=\"footer-title opacity-100 text-white\">Contacto</header>\n    <a class=\"link link-hover max-w-[200px]\">Lima, Perú</a>\n    <a href=\"mailto:contacto@grupoempatic.com\" class=\"link link-hover text-primary\">contacto@grupoempatic.com</a>\n    <a href=\"tel:+51974131951\" class=\"link link-hover\">+51 974 131 951</a>\n  </nav>\n</footer>\n<footer class=\"footer footer-center p-4 bg-base-300 text-base-content\">\n  <aside class=\"items-center grid-flow-col\">\n    <p>© 2025 Grupo EMPATIC. Todos los derechos reservados.</p>\n  </aside>\n  <nav class=\"md:place-self-center md:justify-self-end\">\n    <div class=\"grid grid-flow-col gap-4 text-sm\">\n        <a class=\"link link-hover\">Términos y condiciones</a>\n        <a class=\"link link-hover\">Política de privacidad</a>\n        <a class=\"link link-hover\">Libro de reclamaciones</a>\n    </div>\n  </nav>\n</footer>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\n\r\n@Component({\r\n    selector: 'app-footer',\r\n    standalone: true,\r\n    imports: [CommonModule],\r\n    template: `\r\n    <footer class=\"footer p-10 bg-base-200 text-base-content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">\r\n      <aside>\r\n        <a routerLink=\"/\" class=\"btn btn-ghost text-xl font-bold mb-2\">\r\n            <svg width=\"32\" height=\"32\" viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\" class=\"mr-2\">\r\n                <defs>\r\n                    <linearGradient id=\"grad1\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\">\r\n                        <stop offset=\"0%\" stop-color=\"#FF6B6B\" />\r\n                        <stop offset=\"100%\" stop-color=\"#4D96FF\" />\r\n                    </linearGradient>\r\n                    <filter id=\"shadow\" x=\"-20%\" y=\"-20%\" width=\"140%\" height=\"140%\">\r\n                        <feGaussianBlur in=\"SourceAlpha\" stdDeviation=\"3\"/>\r\n                        <feOffset dx=\"2\" dy=\"2\" result=\"offsetblur\"/>\r\n                        <feComponentTransfer>\r\n                            <feFuncA type=\"linear\" slope=\"0.5\"/>\r\n                        </feComponentTransfer>\r\n                        <feMerge>\r\n                            <feMergeNode/>\r\n                            <feMergeNode in=\"SourceGraphic\"/>\r\n                        </feMerge>\r\n                    </filter>\r\n                </defs>\r\n                <g filter=\"url(#shadow)\">\r\n                    <path d=\"M50 10 C 20 10, 10 40, 10 50 C 10 90, 50 90, 50 90\" fill=\"none\" stroke=\"url(#grad1)\" stroke-width=\"12\" stroke-linecap=\"round\"/>\r\n                    <path d=\"M50 90 C 80 90, 90 60, 90 50 C 90 10, 50 10, 50 10\" fill=\"none\" stroke=\"url(#grad1)\" stroke-width=\"12\" stroke-linecap=\"round\"/>\r\n                    <circle cx=\"50\" cy=\"50\" r=\"10\" fill=\"url(#grad1)\"/>\r\n                </g>\r\n            </svg>\r\n            <span class=\"text-primary\">GRUPO</span>EMPATIC\r\n        </a>\r\n        <p class=\"max-w-xs\">\r\n          Consultora de impacto social comprometida con el desarrollo integral, \r\n          generando soluciones estratégicas, innovadoras y sostenibles.\r\n        </p>\r\n        <div class=\"mt-4 flex gap-4\">\r\n            <!-- Social Icons -->\r\n            <a href=\"https://www.facebook.com/grupoempatic\" target=\"_blank\" class=\"link link-hover text-2xl\">\r\n              <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"currentColor\" class=\"hover:text-primary transition-colors\"><path d=\"M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z\"></path></svg>\r\n            </a>\r\n            <a href=\"https://www.linkedin.com/company/grupo-empatic/\" target=\"_blank\" class=\"link link-hover text-2xl\">\r\n              <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"currentColor\" class=\"hover:text-primary transition-colors\"><path d=\"M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.98v16h4.98v-8.396c0-2.008 1.12-3.125 2.774-3.125 1.522 0 2.402 1.018 2.402 3.125v8.396h4.98v-8.66c0-3.678-1.92-6.34-5.248-6.34-2.43 0-3.822 1.37-4.432 2.25v-1.99h-4.98v16z\"></path></svg>\r\n            </a>\r\n            <a href=\"https://www.instagram.com/grupo.empatic/\" target=\"_blank\" class=\"link link-hover text-2xl\">\r\n              <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"currentColor\" class=\"hover:text-primary transition-colors\"><path d=\"M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.441 1.441 1.441 1.441-.645 1.441-1.441-.645-1.44-1.441-1.44z\"></path></svg>\r\n            </a>\r\n        </div>\r\n      </aside> \r\n      <nav>\r\n        <header class=\"footer-title opacity-100 text-white\">Servicios</header> \r\n        <a class=\"link link-hover\">Consultorías de Impacto</a>\r\n        <a class=\"link link-hover\">Acciones Empáticas</a>\r\n      </nav> \r\n      <nav>\r\n        <header class=\"footer-title opacity-100 text-white\">Empresa</header> \r\n        <a class=\"link link-hover\">Nosotros</a>\r\n        <a class=\"link link-hover\">Equipo</a>\r\n        <a class=\"link link-hover\">Novedades</a>\r\n        <a class=\"link link-hover\">Trabaja con nosotros</a>\r\n      </nav> \r\n      <nav>\r\n        <header class=\"footer-title opacity-100 text-white\">Contacto</header> \r\n        <a class=\"link link-hover max-w-[200px]\">Lima, Perú</a>\r\n        <a href=\"mailto:contacto@grupoempatic.com\" class=\"link link-hover text-primary\">contacto@grupoempatic.com</a>\r\n        <a href=\"tel:+51974131951\" class=\"link link-hover\">+51 974 131 951</a>\r\n      </nav>\r\n    </footer>\r\n    <footer class=\"footer footer-center p-4 bg-base-300 text-base-content\">\r\n      <aside class=\"items-center grid-flow-col\">\r\n        <p>© 2025 Grupo EMPATIC. Todos los derechos reservados.</p>\r\n      </aside> \r\n      <nav class=\"md:place-self-center md:justify-self-end\">\r\n        <div class=\"grid grid-flow-col gap-4 text-sm\">\r\n            <a class=\"link link-hover\">Términos y condiciones</a>\r\n            <a class=\"link link-hover\">Política de privacidad</a>\r\n            <a class=\"link link-hover\">Libro de reclamaciones</a>\r\n        </div>\r\n      </nav>\r\n    </footer>\r\n  `\r\n})\r\nexport class FooterComponent { }\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": []
+        },
+        {
+            "name": "HeaderComponent",
+            "id": "component-HeaderComponent-48b9abe37706bc42f20cfa97ed9f943678344ea7d254c0c82183c657750c2191b43486fe730c778627b2ea6aa0e2f33a7abcf3ce08b68ad18b062ad99ea97acb",
+            "file": "src/stories/header.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-header",
+            "styleUrls": [
+                "./header.css"
+            ],
+            "styles": [],
+            "template": "<header>  <div class=\"storybook-header\">\n    <div>\n      <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\n        <g fill=\"none\" fillRule=\"evenodd\">\n          <path\n            d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\n            fill=\"#FFF\"\n          />\n          <path\n            d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\n            fill=\"#555AB9\"\n          />\n          <path d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\" fill=\"#91BAF8\" />\n        </g>\n      </svg>\n      <h1>Acme</h1>\n    </div>\n    <div>\n      <div *ngIf=\"user\">\n        <span class=\"welcome\">\n          Welcome, <b>{{ user.name }}</b\n          >!\n        </span>\n        <storybook-button\n          *ngIf=\"user\"\n          size=\"small\"\n          (onClick)=\"onLogout.emit($event)\"\n          label=\"Log out\"\n        ></storybook-button>\n      </div>\n      <div *ngIf=\"!user\">\n        <storybook-button\n          *ngIf=\"!user\"\n          size=\"small\"\n          class=\"margin-left\"\n          (onClick)=\"onLogin.emit($event)\"\n          label=\"Log in\"\n        ></storybook-button>\n        <storybook-button\n          *ngIf=\"!user\"\n          size=\"small\"\n          [primary]=\"true\"\n          class=\"margin-left\"\n          (onClick)=\"onCreateAccount.emit($event)\"\n          label=\"Sign up\"\n        ></storybook-button>\n      </div>\n    </div>\n  </div>\n</header>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "user",
+                    "defaultValue": "null",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 66,
+                    "type": "User | null",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onCreateAccount",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 75,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "onLogin",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 69,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "onLogout",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 72,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "ButtonComponent",
+                    "type": "component"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\nimport { ButtonComponent } from './button.component';\nimport type { User } from './user';\n\n@Component({\n  selector: 'storybook-header',\n  standalone: true,\n  imports: [CommonModule, ButtonComponent],\n  template: `<header>\n  <div class=\"storybook-header\">\n    <div>\n      <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\n        <g fill=\"none\" fillRule=\"evenodd\">\n          <path\n            d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\n            fill=\"#FFF\"\n          />\n          <path\n            d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\n            fill=\"#555AB9\"\n          />\n          <path d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\" fill=\"#91BAF8\" />\n        </g>\n      </svg>\n      <h1>Acme</h1>\n    </div>\n    <div>\n      <div *ngIf=\"user\">\n        <span class=\"welcome\">\n          Welcome, <b>{{ user.name }}</b\n          >!\n        </span>\n        <storybook-button\n          *ngIf=\"user\"\n          size=\"small\"\n          (onClick)=\"onLogout.emit($event)\"\n          label=\"Log out\"\n        ></storybook-button>\n      </div>\n      <div *ngIf=\"!user\">\n        <storybook-button\n          *ngIf=\"!user\"\n          size=\"small\"\n          class=\"margin-left\"\n          (onClick)=\"onLogin.emit($event)\"\n          label=\"Log in\"\n        ></storybook-button>\n        <storybook-button\n          *ngIf=\"!user\"\n          size=\"small\"\n          [primary]=\"true\"\n          class=\"margin-left\"\n          (onClick)=\"onCreateAccount.emit($event)\"\n          label=\"Sign up\"\n        ></storybook-button>\n      </div>\n    </div>\n  </div>\n</header>`,\n  styleUrls: ['./header.css'],\n})\nexport class HeaderComponent {\n  @Input()\n  user: User | null = null;\n\n  @Output()\n  onLogin = new EventEmitter<Event>();\n\n  @Output()\n  onLogout = new EventEmitter<Event>();\n\n  @Output()\n  onCreateAccount = new EventEmitter<Event>();\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".storybook-header {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n  padding: 15px 20px;\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n}\n\n.storybook-header svg {\n  display: inline-block;\n  vertical-align: top;\n}\n\n.storybook-header h1 {\n  display: inline-block;\n  vertical-align: top;\n  margin: 6px 0 6px 10px;\n  font-weight: 700;\n  font-size: 20px;\n  line-height: 1;\n}\n\n.storybook-header button + button {\n  margin-left: 10px;\n}\n\n.storybook-header .welcome {\n  margin-right: 10px;\n  color: #333;\n  font-size: 14px;\n}\n",
+                    "styleUrl": "./header.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": []
+        },
+        {
+            "name": "HeaderComponent",
+            "id": "component-HeaderComponent-ce208cbbb1996a1d4bc9ad22a98e2f7340b57c6600d6b97345f6e7c8d42489232edc8be104424e75d3ca478bfa60aad8d9bed1cfae27b27065ee4edf40a81432-1",
+            "file": "src/app/shared/components/header/header.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-header",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<div class=\"navbar bg-base-100/90 backdrop-blur-md sticky top-0 z-50 border-b border-base-200\">\n  <div class=\"navbar-start\">\n    <a routerLink=\"/\" class=\"btn btn-ghost text-xl font-bold\" aria-label=\"Grupo Empatic Home\">\n        <svg width=\"32\" height=\"32\" viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\" class=\"mr-2\" aria-hidden=\"true\">\n            <defs>\n                <linearGradient id=\"grad1\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\">\n                    <stop offset=\"0%\" stop-color=\"#FF6B6B\" />\n                    <stop offset=\"100%\" stop-color=\"#4D96FF\" />\n                </linearGradient>\n                <filter id=\"shadow\" x=\"-20%\" y=\"-20%\" width=\"140%\" height=\"140%\">\n                    <feGaussianBlur in=\"SourceAlpha\" stdDeviation=\"3\"/>\n                    <feOffset dx=\"2\" dy=\"2\" result=\"offsetblur\"/>\n                    <feComponentTransfer>\n                        <feFuncA type=\"linear\" slope=\"0.5\"/>\n                    </feComponentTransfer>\n                    <feMerge>\n                        <feMergeNode/>\n                        <feMergeNode in=\"SourceGraphic\"/>\n                    </feMerge>\n                </filter>\n            </defs>\n            <g filter=\"url(#shadow)\">\n                <path d=\"M50 10 C 20 10, 10 40, 10 50 C 10 90, 50 90, 50 90\" fill=\"none\" stroke=\"url(#grad1)\" stroke-width=\"12\" stroke-linecap=\"round\"/>\n                <path d=\"M50 90 C 80 90, 90 60, 90 50 C 90 10, 50 10, 50 10\" fill=\"none\" stroke=\"url(#grad1)\" stroke-width=\"12\" stroke-linecap=\"round\"/>\n                <circle cx=\"50\" cy=\"50\" r=\"10\" fill=\"url(#grad1)\"/>\n            </g>\n        </svg>\n        <span class=\"text-primary\">GRUPO</span>EMPATIC\n    </a>\n  </div>\n  <div class=\"navbar-center hidden lg:flex\">\n    <ul class=\"menu menu-horizontal px-1 font-medium\">\n      <li><a routerLink=\"/\" routerLinkActive=\"text-primary !bg-transparent\" [routerLinkActiveOptions]=\"{exact: true}\" aria-label=\"Nosotros\">Nosotros</a></li>\n      <li><a routerLink=\"/consultorias\" routerLinkActive=\"text-primary !bg-transparent\" aria-label=\"Consultorías\">Consultorías</a></li>\n      <li><a routerLink=\"/empathetic-actions\" routerLinkActive=\"text-primary !bg-transparent\" aria-label=\"Acciones Empáticas\">Acciones Empáticas</a></li>\n    </ul>\n  </div>\n  <div class=\"navbar-end\">\n    <a class=\"btn btn-primary bg-gradient-to-r from-secondary to-primary text-white rounded-full px-6 shadow-lg hover:shadow-primary/50 transition-all duration-300 transform hover:scale-105 border-none hidden lg:flex\" aria-label=\"Quiero una cotización\">\n      Quiero una cotización\n    </a>\n    <div class=\"lg:hidden\">\n      <button (click)=\"toggleMenu()\" class=\"btn btn-ghost\" aria-label=\"Open menu\">\n        <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-5 w-5\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" aria-hidden=\"true\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4 6h16M4 12h8m-8 6h16\" /></svg>\n      </button>\n    </div>\n  </div>\n</div>\n\n<!-- Mobile Menu -->\n<div class=\"fixed top-0 left-0 w-full h-full bg-base-100/95 shadow-lg z-50 transform transition-transform duration-300 ease-in-out\"\n     [class.translate-x-0]=\"isMenuOpen\"\n     [class.-translate-x-full]=\"!isMenuOpen\">\n  <div class=\"p-4 flex flex-col h-full justify-center items-center\">\n    <button (click)=\"toggleMenu()\" class=\"btn btn-ghost absolute top-4 right-4 z-50\" aria-label=\"Close menu\">\n        <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-6 w-6\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" aria-hidden=\"true\">\n            <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M6 18L18 6M6 6l12 12\" />\n        </svg>\n    </button>\n    <ul class=\"menu flex-grow justify-center items-center text-2xl font-bold\">\n      <li><a routerLink=\"/\" routerLinkActive=\"text-primary\" [routerLinkActiveOptions]=\"{exact: true}\" (click)=\"toggleMenu()\" aria-label=\"Nosotros\">Nosotros</a></li>\n      <li><a routerLink=\"/consultorias\" routerLinkActive=\"text-primary\" (click)=\"toggleMenu()\" aria-label=\"Consultorías\">Consultorías</a></li>\n      <li><a routerLink=\"/empathetic-actions\" routerLinkActive=\"text-primary\" (click)=\"toggleMenu()\" aria-label=\"Acciones Empáticas\">Acciones Empáticas</a></li>\n      <li><a class=\"btn btn-primary bg-gradient-to-r from-secondary to-primary text-white rounded-full px-6 shadow-lg hover:shadow-primary/50 transition-all duration-300 transform hover:scale-105 border-none mt-4 text-2xl font-bold\" (click)=\"toggleMenu()\" aria-label=\"Quiero una cotización\">\n        Quiero una cotización\n      </a></li>\n    </ul>\n  </div>\n</div>\n<div *ngIf=\"isMenuOpen\" (click)=\"toggleMenu()\" class=\"fixed inset-0 bg-black opacity-50 z-40\" aria-hidden=\"true\"></div>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "isMenuOpen",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 83
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "toggleMenu",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 87,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "RouterLink"
+                },
+                {
+                    "name": "RouterLinkActive"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Inject } from '@angular/core';\r\nimport { CommonModule, DOCUMENT } from '@angular/common';\r\nimport { RouterLink, RouterLinkActive } from '@angular/router';\r\n\r\n@Component({\r\n  selector: 'app-header',\r\n  standalone: true,\r\n  imports: [CommonModule, RouterLink, RouterLinkActive],\r\n  template: `\r\n    <div class=\"navbar bg-base-100/90 backdrop-blur-md sticky top-0 z-50 border-b border-base-200\">\r\n      <div class=\"navbar-start\">\r\n        <a routerLink=\"/\" class=\"btn btn-ghost text-xl font-bold\" aria-label=\"Grupo Empatic Home\">\r\n            <svg width=\"32\" height=\"32\" viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\" class=\"mr-2\" aria-hidden=\"true\">\r\n                <defs>\r\n                    <linearGradient id=\"grad1\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\">\r\n                        <stop offset=\"0%\" stop-color=\"#FF6B6B\" />\r\n                        <stop offset=\"100%\" stop-color=\"#4D96FF\" />\r\n                    </linearGradient>\r\n                    <filter id=\"shadow\" x=\"-20%\" y=\"-20%\" width=\"140%\" height=\"140%\">\r\n                        <feGaussianBlur in=\"SourceAlpha\" stdDeviation=\"3\"/>\r\n                        <feOffset dx=\"2\" dy=\"2\" result=\"offsetblur\"/>\r\n                        <feComponentTransfer>\r\n                            <feFuncA type=\"linear\" slope=\"0.5\"/>\r\n                        </feComponentTransfer>\r\n                        <feMerge>\r\n                            <feMergeNode/>\r\n                            <feMergeNode in=\"SourceGraphic\"/>\r\n                        </feMerge>\r\n                    </filter>\r\n                </defs>\r\n                <g filter=\"url(#shadow)\">\r\n                    <path d=\"M50 10 C 20 10, 10 40, 10 50 C 10 90, 50 90, 50 90\" fill=\"none\" stroke=\"url(#grad1)\" stroke-width=\"12\" stroke-linecap=\"round\"/>\r\n                    <path d=\"M50 90 C 80 90, 90 60, 90 50 C 90 10, 50 10, 50 10\" fill=\"none\" stroke=\"url(#grad1)\" stroke-width=\"12\" stroke-linecap=\"round\"/>\r\n                    <circle cx=\"50\" cy=\"50\" r=\"10\" fill=\"url(#grad1)\"/>\r\n                </g>\r\n            </svg>\r\n            <span class=\"text-primary\">GRUPO</span>EMPATIC\r\n        </a>\r\n      </div>\r\n      <div class=\"navbar-center hidden lg:flex\">\r\n        <ul class=\"menu menu-horizontal px-1 font-medium\">\r\n          <li><a routerLink=\"/\" routerLinkActive=\"text-primary !bg-transparent\" [routerLinkActiveOptions]=\"{exact: true}\" aria-label=\"Nosotros\">Nosotros</a></li>\r\n          <li><a routerLink=\"/consultorias\" routerLinkActive=\"text-primary !bg-transparent\" aria-label=\"Consultorías\">Consultorías</a></li>\r\n          <li><a routerLink=\"/empathetic-actions\" routerLinkActive=\"text-primary !bg-transparent\" aria-label=\"Acciones Empáticas\">Acciones Empáticas</a></li>\r\n        </ul>\r\n      </div>\r\n      <div class=\"navbar-end\">\r\n        <a class=\"btn btn-primary bg-gradient-to-r from-secondary to-primary text-white rounded-full px-6 shadow-lg hover:shadow-primary/50 transition-all duration-300 transform hover:scale-105 border-none hidden lg:flex\" aria-label=\"Quiero una cotización\">\r\n          Quiero una cotización\r\n        </a>\r\n        <div class=\"lg:hidden\">\r\n          <button (click)=\"toggleMenu()\" class=\"btn btn-ghost\" aria-label=\"Open menu\">\r\n            <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-5 w-5\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" aria-hidden=\"true\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4 6h16M4 12h8m-8 6h16\" /></svg>\r\n          </button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n    <!-- Mobile Menu -->\r\n    <div class=\"fixed top-0 left-0 w-full h-full bg-base-100/95 shadow-lg z-50 transform transition-transform duration-300 ease-in-out\"\r\n         [class.translate-x-0]=\"isMenuOpen\"\r\n         [class.-translate-x-full]=\"!isMenuOpen\">\r\n      <div class=\"p-4 flex flex-col h-full justify-center items-center\">\r\n        <button (click)=\"toggleMenu()\" class=\"btn btn-ghost absolute top-4 right-4 z-50\" aria-label=\"Close menu\">\r\n            <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-6 w-6\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" aria-hidden=\"true\">\r\n                <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M6 18L18 6M6 6l12 12\" />\r\n            </svg>\r\n        </button>\r\n        <ul class=\"menu flex-grow justify-center items-center text-2xl font-bold\">\r\n          <li><a routerLink=\"/\" routerLinkActive=\"text-primary\" [routerLinkActiveOptions]=\"{exact: true}\" (click)=\"toggleMenu()\" aria-label=\"Nosotros\">Nosotros</a></li>\r\n          <li><a routerLink=\"/consultorias\" routerLinkActive=\"text-primary\" (click)=\"toggleMenu()\" aria-label=\"Consultorías\">Consultorías</a></li>\r\n          <li><a routerLink=\"/empathetic-actions\" routerLinkActive=\"text-primary\" (click)=\"toggleMenu()\" aria-label=\"Acciones Empáticas\">Acciones Empáticas</a></li>\r\n          <li><a class=\"btn btn-primary bg-gradient-to-r from-secondary to-primary text-white rounded-full px-6 shadow-lg hover:shadow-primary/50 transition-all duration-300 transform hover:scale-105 border-none mt-4 text-2xl font-bold\" (click)=\"toggleMenu()\" aria-label=\"Quiero una cotización\">\r\n            Quiero una cotización\r\n          </a></li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n    <div *ngIf=\"isMenuOpen\" (click)=\"toggleMenu()\" class=\"fixed inset-0 bg-black opacity-50 z-40\" aria-hidden=\"true\"></div>\r\n  `,\r\n})\r\nexport class HeaderComponent {\r\n  isMenuOpen = false;\r\n\r\n  constructor(@Inject(DOCUMENT) private document: Document) { }\r\n\r\n  toggleMenu() {\r\n    this.isMenuOpen = !this.isMenuOpen;\r\n    if (this.isMenuOpen) {\r\n      this.document.body.classList.add('overflow-hidden');\r\n      this.document.documentElement.classList.add('overflow-hidden');\r\n    } else {\r\n      this.document.body.classList.remove('overflow-hidden');\r\n      this.document.documentElement.classList.remove('overflow-hidden');\r\n    }\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "document",
+                        "type": "Document",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 83,
+                "jsdoctags": [
+                    {
+                        "name": "document",
+                        "type": "Document",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "extends": [],
+            "isDuplicate": true,
+            "duplicateId": 1,
+            "duplicateName": "HeaderComponent-1"
+        },
+        {
+            "name": "HomeComponent",
+            "id": "component-HomeComponent-84c27c3dc7d2627556e46f7f713d1d9eff97e15c3340dbdad358b09dc6434946f344ceb4d567c749996693672868f37a11b788e035618834c15d8a16c3eac66c",
+            "file": "src/app/features/home/home.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-home",
+            "styleUrls": [
+                "./home.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./home.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "testimonials",
+                    "defaultValue": "[\r\n    {\r\n      quote: \"El equipo de Grupo EMPATIC demostró un compromiso y una pasión que transformaron por completo nuestro proyecto. Su enfoque estratégico y humano fue clave para el éxito.\",\r\n      author: \"Ana Sofía\",\r\n      title: \"Directora de Innovación, Corp Inc.\",\r\n      avatar: \"https://i.pravatar.cc/150?u=a042581f4e29026704d\",\r\n      ringColor: \"ring-primary\"\r\n    },\r\n    {\r\n      quote: \"La metodología de EMPATIC nos permitió no solo alcanzar nuestras metas, sino superarlas. Su visión para integrar la tecnología en el impacto social es única.\",\r\n      author: \"Carlos Rodríguez\",\r\n      title: \"Gerente de Sostenibilidad, Natura SAC\",\r\n      avatar: \"https://i.pravatar.cc/150?u=a042581f4e29026704e\",\r\n      ringColor: \"ring-secondary\"\r\n    },\r\n    {\r\n      quote: \"Trabajar con Grupo EMPATIC ha sido una experiencia inspiradora. Su dedicación a la formación de líderes y al desarrollo comunitario es genuina y efectiva.\",\r\n      author: \"Lucía Mendoza\",\r\n      title: \"Líder de Proyecto, ONG Futuro\",\r\n      avatar: \"https://i.pravatar.cc/150?u=a042581f4e29026704f\",\r\n      ringColor: \"ring-accent\"\r\n    },\r\n    {\r\n      quote: \"La capacidad de Grupo EMPATIC para innovar y adaptarse a nuestras necesidades fue impresionante. Definitivamente un aliado estratégico para cualquier empresa con propósito.\",\r\n      author: \"Javier Gómez\",\r\n      title: \"CEO, StartUp Creativa\",\r\n      avatar: \"https://i.pravatar.cc/150?u=a042581f4e29026704g\",\r\n      ringColor: \"ring-success\"\r\n    }\r\n  ]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngAfterViewInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 49,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "RouterLink"
+                },
+                {
+                    "name": "NgFor"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, AfterViewInit, ElementRef, Inject, PLATFORM_ID } from '@angular/core';\r\nimport { CommonModule, NgFor, isPlatformBrowser } from '@angular/common';\r\nimport { RouterLink } from '@angular/router';\r\n\r\n@Component({\r\n    selector: 'app-home',\r\n    standalone: true,\r\n    imports: [CommonModule, RouterLink, NgFor],\r\n    templateUrl: './home.component.html',\r\n    styleUrls: ['./home.component.css']\r\n})\r\nexport class HomeComponent implements AfterViewInit {\r\n  testimonials = [\r\n    {\r\n      quote: \"El equipo de Grupo EMPATIC demostró un compromiso y una pasión que transformaron por completo nuestro proyecto. Su enfoque estratégico y humano fue clave para el éxito.\",\r\n      author: \"Ana Sofía\",\r\n      title: \"Directora de Innovación, Corp Inc.\",\r\n      avatar: \"https://i.pravatar.cc/150?u=a042581f4e29026704d\",\r\n      ringColor: \"ring-primary\"\r\n    },\r\n    {\r\n      quote: \"La metodología de EMPATIC nos permitió no solo alcanzar nuestras metas, sino superarlas. Su visión para integrar la tecnología en el impacto social es única.\",\r\n      author: \"Carlos Rodríguez\",\r\n      title: \"Gerente de Sostenibilidad, Natura SAC\",\r\n      avatar: \"https://i.pravatar.cc/150?u=a042581f4e29026704e\",\r\n      ringColor: \"ring-secondary\"\r\n    },\r\n    {\r\n      quote: \"Trabajar con Grupo EMPATIC ha sido una experiencia inspiradora. Su dedicación a la formación de líderes y al desarrollo comunitario es genuina y efectiva.\",\r\n      author: \"Lucía Mendoza\",\r\n      title: \"Líder de Proyecto, ONG Futuro\",\r\n      avatar: \"https://i.pravatar.cc/150?u=a042581f4e29026704f\",\r\n      ringColor: \"ring-accent\"\r\n    },\r\n    {\r\n      quote: \"La capacidad de Grupo EMPATIC para innovar y adaptarse a nuestras necesidades fue impresionante. Definitivamente un aliado estratégico para cualquier empresa con propósito.\",\r\n      author: \"Javier Gómez\",\r\n      title: \"CEO, StartUp Creativa\",\r\n      avatar: \"https://i.pravatar.cc/150?u=a042581f4e29026704g\",\r\n      ringColor: \"ring-success\"\r\n    }\r\n  ];\r\n\r\n  constructor(\r\n    private elementRef: ElementRef,\r\n    @Inject(PLATFORM_ID) private platformId: Object\r\n  ) {}\r\n\r\n  ngAfterViewInit() {\r\n    if (isPlatformBrowser(this.platformId)) {\r\n      setTimeout(() => {\r\n        const observer = new IntersectionObserver((entries) => {\r\n          entries.forEach(entry => {\r\n            if (entry.isIntersecting) {\r\n              entry.target.classList.add('visible');\r\n              entry.target.classList.remove('hidden-for-animation');\r\n            }\r\n          });\r\n        }, {\r\n          threshold: 0.1\r\n        });\r\n\r\n        const sections = this.elementRef.nativeElement.querySelectorAll('.hidden-for-animation');\r\n        sections.forEach((section: any) => {\r\n          observer.observe(section);\r\n        });\r\n      }, 100);\r\n    }\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".hidden-for-animation {\n  opacity: 0;\n  transform: translateY(20px);\n  transition: opacity 0.5s ease-out, transform 0.5s ease-out;\n}\n\n.visible {\n  opacity: 1;\n  transform: translateY(0);\n}\n\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n\n  to {\n    opacity: 1;\n  }\n}\n\n.fade-in {\n  animation: fadeIn 1s ease-out;\n}\n\n@keyframes slideInFromBottom {\n  from {\n    opacity: 0;\n    transform: translateY(50px);\n  }\n\n  to {\n    opacity: 1;\n    transform: translateY(0);\n  }\n}\n\n.slide-in-from-bottom {\n  animation: slideInFromBottom 1s ease-out;\n}\n\n.timeline-item {\n  position: relative;\n}\n\n.timeline-item .sub-steps {\n  opacity: 0;\n  max-height: 0;\n  overflow: hidden;\n  transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;\n}\n\n.timeline-item:hover .sub-steps {\n  opacity: 1;\n  max-height: 500px;\n  /* Adjust as needed */\n}\n\n@media (min-width: 768px) {\n  .timeline-item .sub-steps {\n    visibility: hidden;\n    position: absolute;\n    top: 45%;\n    transform: translateY(-50%);\n    width: 100%;\n    padding: 1rem;\n    background-color: var(--color-base-200);\n    border-radius: var(--rounded-box, 1rem);\n    box-shadow: var(--shadow-lg, 0 25px 50px -12px rgba(0, 0, 0, 0.25));\n    max-height: unset;\n  }\n\n  .timeline-start .sub-steps {\n    left: 110%;\n  }\n\n  .timeline-end .sub-steps {\n    right: 110%;\n  }\n\n  .timeline-item:hover .sub-steps {\n    visibility: visible;\n  }\n}",
+                    "styleUrl": "./home.component.css"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "elementRef",
+                        "type": "ElementRef",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    },
+                    {
+                        "name": "platformId",
+                        "type": "Object",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 42,
+                "jsdoctags": [
+                    {
+                        "name": "elementRef",
+                        "type": "ElementRef",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "platformId",
+                        "type": "Object",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "extends": [],
+            "implements": [
+                "AfterViewInit"
+            ],
+            "templateData": "<!-- Hero Section -->\n<section class=\"hero min-h-screen bg-base-100 relative overflow-hidden\">\n  <!-- Background Abstract Shapes (Tailwind) -->\n  <div class=\"absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-primary/10 blur-3xl\"></div>\n  <div class=\"absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-secondary/10 blur-3xl\"></div>\n\n  <div class=\"hero-content flex-col lg:flex-row-reverse z-10\">\n    <div class=\"lg:w-1/2 flex justify-center\">\n      <!-- Placeholder for Hero Image -->\n      <div\n        class=\"bg-gradient-to-tr from-primary to-secondary p-1 rounded-3xl rotate-3 hover:rotate-0 transition-transform duration-500 shadow-2xl\">\n        <div\n          class=\"w-full h-96 bg-base-200 rounded-2xl flex items-center justify-center relative overflow-hidden group\">\n          <span class=\"text-4xl\">\n            <img src=\"/image.png\" alt=\"\">\n          </span>\n          <div class=\"absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all\"></div>\n        </div>\n      </div>\n    </div>\n    <div class=\"lg:w-1/2 text-center lg:text-left\">\n      <h1 class=\"text-5xl lg:text-7xl font-bold mb-6 leading-tight\">\n        Consultorías que <span\n          class=\"bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary\">maximizan</span> tu impacto\n      </h1>\n      <p class=\"py-6 text-lg text-base-content/80\">\n        Grupo EMPATIC es una consultora de impacto social que ofrece soluciones estratégicas, tecnológicas y sostenibles\n        para transformar realidades.\n      </p>\n      <div class=\"flex flex-col sm:flex-row gap-4 justify-center lg:justify-start\">\n        <button class=\"btn btn-primary rounded-full px-8 text-white shadow-lg lg:btn-lg hover:brightness-110\">\n          Quiero una cotización\n        </button>\n        <button class=\"btn btn-outline btn-secondary rounded-full px-8 lg:btn-lg hover:text-white\">\n          Nuestros Servicios\n        </button>\n      </div>\n    </div>\n  </div>\n</section>\n\n<!-- Methodology / Timeline Section -->\n<section id=\"methodology-section\" class=\"py-20 bg-base-200 hidden-for-animation\">\n  <div class=\"container mx-auto px-4\">\n    <h2 class=\"text-4xl font-bold text-center mb-16\">Nuestra <span class=\"text-primary\">Metodología</span></h2>\n\n    <ul class=\"timeline timeline-snap-icon max-md:timeline-compact timeline-vertical\">\n      <li>\n        <div class=\"timeline-middle\">\n          <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" class=\"h-5 w-5 text-primary\">\n            <path fill-rule=\"evenodd\"\n              d=\"M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z\"\n              clip-rule=\"evenodd\" />\n          </svg>\n        </div>\n        <div\n          class=\"timeline-start md:text-end mb-10 md:mb-0 bg-base-100 p-6 rounded-xl shadow-lg hover:shadow-primary/20 transition-all border-l-4 border-primary timeline-item\">\n          <time class=\"font-mono italic text-secondary\">Fase 1</time>\n          <div class=\"text-xl font-black mb-2\">Diagnóstico Estratégico</div>\n          <p>Analizamos a profundidad el contexto y las necesidades para identificar las oportunidades de mayor impacto.\n          </p>\n          <div class=\"sub-steps mt-4\">\n            <ul class=\"text-left md:text-left\">\n              <li>🔍 Evaluar la empresa o proyecto</li>\n              <li>📊 Identificar oportunidades y desafíos</li>\n              <li>📌 Análisis de datos y tendencias</li>\n            </ul>\n          </div>\n        </div>\n        <hr class=\"bg-primary\" />\n      </li>\n      <li>\n        <hr class=\"bg-primary\" />\n        <div class=\"timeline-middle\">\n          <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\"\n            class=\"h-5 w-5 text-secondary\">\n            <path fill-rule=\"evenodd\"\n              d=\"M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z\"\n              clip-rule=\"evenodd\" />\n          </svg>\n        </div>\n        <div\n          class=\"timeline-end mb-10 md:mb-0 bg-base-100 p-6 rounded-xl shadow-lg hover:shadow-secondary/20 transition-all border-r-4 md:border-r-0 md:border-l-4 border-secondary timeline-item\">\n          <time class=\"font-mono italic text-secondary\">Fase 2</time>\n          <div class=\"text-xl font-black mb-2\">Plan de Acción Personalizado</div>\n          <p>Diseñamos soluciones a medida, integrando tecnología, sostenibilidad y enfoque humano.</p>\n          <div class=\"sub-steps mt-4\">\n            <ul class=\"text-left md:text-right\">\n              <li>📝 Diseño de estrategias</li>\n              <li>📅 Planificación de la implementación</li>\n              <li>🎯 Definición de KPIs</li>\n            </ul>\n          </div>\n        </div>\n        <hr class=\"bg-secondary\" />\n      </li>\n      <li>\n        <hr class=\"bg-secondary\" />\n        <div class=\"timeline-middle\">\n          <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" class=\"h-5 w-5 text-accent\">\n            <path fill-rule=\"evenodd\"\n              d=\"M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z\"\n              clip-rule=\"evenodd\" />\n          </svg>\n        </div>\n        <!-- TODO: modificar text-center -->\n        <div\n          class=\"timeline-start md:text-end mb-10 md:mb-0 bg-base-100 p-6 rounded-xl shadow-lg hover:shadow-accent/20 transition-all border-l-4 border-accent timeline-item\">\n          <time class=\"font-mono italic text-accent\">Fase 3</time>\n          <div class=\"text-xl font-black mb-2\">Implementación y Acompañamiento</div>\n          <p>Ejecutamos el plan contigo y monitoreamos los resultados para asegurar la sostenibilidad del éxito.</p>\n          <div class=\"sub-steps mt-4\">\n            <ul class=\"text-left md:text-left\">\n              <li>🚀 Ejecución del plan</li>\n              <li>📈 Monitoreo y evaluación</li>\n              <li>🔄 Ajustes y optimización</li>\n            </ul>\n          </div>\n        </div>\n      </li>\n    </ul>\n  </div>\n</section>\n\n<!-- Values Grid -->\n<section id=\"values-section\" class=\"py-20 bg-base-100 hidden-for-animation\">\n  <div class=\"container mx-auto px-4\">\n    <h2 class=\"text-4xl font-bold text-center mb-12\">Nuestros <span class=\"text-secondary\">Valores</span></h2>\n    <div class=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6\">\n      <!-- Value 1 -->\n      <div class=\"card bg-base-200 shadow-xl hover:-translate-y-2 transition-transform duration-300\">\n        <figure class=\"px-10 pt-10 text-primary\">\n          <!-- Icon Placeholder -->\n          <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-16 w-16\" fill=\"none\" viewBox=\"0 0 24 24\"\n            stroke=\"currentColor\">\n            <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"\n              d=\"M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z\" />\n          </svg>\n        </figure>\n        <div class=\"card-body items-center text-center\">\n          <h3 class=\"card-title\">Empatía</h3>\n          <p>Ponemos a las personas en el centro de cada decisión.</p>\n        </div>\n      </div>\n\n      <!-- Value 2 -->\n      <div class=\"card bg-base-200 shadow-xl hover:-translate-y-2 transition-transform duration-300\">\n        <figure class=\"px-10 pt-10 text-secondary\">\n          <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-16 w-16\" fill=\"none\" viewBox=\"0 0 24 24\"\n            stroke=\"currentColor\">\n            <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M13 10V3L4 14h7v7l9-11h-7z\" />\n          </svg>\n        </figure>\n        <div class=\"card-body items-center text-center\">\n          <h3 class=\"card-title\">Innovación</h3>\n          <p>Buscamos soluciones creativas para problemas complejos.</p>\n        </div>\n      </div>\n\n      <!-- Value 3 -->\n      <div class=\"card bg-base-200 shadow-xl hover:-translate-y-2 transition-transform duration-300\">\n        <figure class=\"px-10 pt-10 text-accent\">\n          <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-16 w-16\" fill=\"none\" viewBox=\"0 0 24 24\"\n            stroke=\"currentColor\">\n            <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"\n              d=\"M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z\" />\n          </svg>\n        </figure>\n        <div class=\"card-body items-center text-center\">\n          <h3 class=\"card-title\">Sostenibilidad</h3>\n          <p>Generamos impacto positivo a largo plazo.</p>\n        </div>\n      </div>\n\n      <!-- Value 4 -->\n      <div class=\"card bg-base-200 shadow-xl hover:-translate-y-2 transition-transform duration-300\">\n        <figure class=\"px-10 pt-10 text-success\">\n          <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-16 w-16\" fill=\"none\" viewBox=\"0 0 24 24\"\n            stroke=\"currentColor\">\n            <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"\n              d=\"M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 005.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z\" />\n          </svg>\n        </figure>\n        <div class=\"card-body items-center text-center\">\n          <h3 class=\"card-title\">Colaboración</h3>\n          <p>Creemos en el poder de trabajar juntos.</p>\n        </div>\n      </div>\n\n    </div>\n  </div>\n</section>\n\n<!-- Testimonials Section -->\n<section id=\"testimonials-section\" class=\"py-20 bg-base-200 hidden-for-animation\">\n  <div class=\"container mx-auto px-4 relative\">\n    <h2 class=\"text-4xl font-bold text-center mb-16\">Lo que dicen de <span class=\"text-primary\">nosotros</span></h2>\n    <div #carousel class=\"carousel carousel-center w-full p-4 space-x-4 bg-neutral rounded-box scroll-smooth\">\n      <div *ngFor=\"let testimonial of testimonials; index as i\" id=\"item{{ i }}\" class=\"carousel-item\">\n        <div class=\"card bg-base-100 shadow-lg w-80 md:w-96\">\n          <div class=\"card-body\">\n            <div class=\"flex items-center mb-4\">\n              <div class=\"avatar\">\n                <div class=\"w-16 rounded-full ring {{ testimonial.ringColor }} ring-offset-base-100 ring-offset-2\">\n                  <img [src]=\"testimonial.avatar\" alt=\"Avatar\" />\n                </div>\n              </div>\n              <div class=\"ml-4\">\n                <h3 class=\"font-bold\">{{ testimonial.author }}</h3>\n                <p class=\"text-sm opacity-60\">{{ testimonial.title }}</p>\n              </div>\n            </div>\n            <p>\"{{ testimonial.quote }}\"</p>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 mt-8\">\n      <button (click)=\"carousel.scrollBy({ left: -300, behavior: 'smooth' })\" class=\"btn btn-circle\">❮</button>\n      <button (click)=\"carousel.scrollBy({ left: 300, behavior: 'smooth' })\" class=\"btn btn-circle\">❯</button>\n    </div>\n  </div>\n</section>"
+        },
+        {
+            "name": "PageComponent",
+            "id": "component-PageComponent-21dd6eb370b4983b5c21c84d40e6f54d266a9d9af9889e6e76b35c43058bd53b3e451bad089d5adf4bea46647ba10265a2fa8cb15630398e75636307d4817fc6",
+            "file": "src/stories/page.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-page",
+            "styleUrls": [
+                "./page.css"
+            ],
+            "styles": [],
+            "template": "<article>  <storybook-header\n    [user]=\"user\"\n    (onLogout)=\"doLogout()\"\n    (onLogin)=\"doLogin()\"\n    (onCreateAccount)=\"doCreateAccount()\"\n  ></storybook-header>\n  <section class=\"storybook-page\">\n    <h2>Pages in Storybook</h2>\n    <p>\n      We recommend building UIs with a\n      <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n        <strong>component-driven</strong>\n      </a>\n      process starting with atomic components and ending with pages.\n    </p>\n    <p>\n      Render pages with mock data. This makes it easy to build and review page states without\n      needing to navigate to them in your app. Here are some handy patterns for managing page data\n      in Storybook:\n    </p>\n    <ul>\n      <li>\n        Use a higher-level connected component. Storybook helps you compose such data from the\n        \"args\" of child component stories\n      </li>\n      <li>\n        Assemble data in the page component from your services. You can mock these services out\n        using Storybook.\n      </li>\n    </ul>\n    <p>\n      Get a guided tutorial on component-driven development at\n      <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\n        Storybook tutorials\n      </a>\n      . Read more in the\n      <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\n      .\n    </p>\n    <div class=\"tip-wrapper\">\n      <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n      <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n        <g fill=\"none\" fillRule=\"evenodd\">\n          <path\n            d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n            id=\"a\"\n            fill=\"#999\"\n          />\n        </g>\n      </svg>\n      Viewports addon in the toolbar\n    </div>\n  </section>\n</article>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "user",
+                    "defaultValue": "null",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "User | null",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 69
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "doCreateAccount",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 79,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "doLogin",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 75,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "doLogout",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 71,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "HeaderComponent",
+                    "type": "component"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\nimport { HeaderComponent } from './header.component';\nimport type { User } from './user';\n\n@Component({\n  selector: 'storybook-page',\n  standalone: true,\n  imports: [CommonModule, HeaderComponent],\n  template: `<article>\n  <storybook-header\n    [user]=\"user\"\n    (onLogout)=\"doLogout()\"\n    (onLogin)=\"doLogin()\"\n    (onCreateAccount)=\"doCreateAccount()\"\n  ></storybook-header>\n  <section class=\"storybook-page\">\n    <h2>Pages in Storybook</h2>\n    <p>\n      We recommend building UIs with a\n      <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n        <strong>component-driven</strong>\n      </a>\n      process starting with atomic components and ending with pages.\n    </p>\n    <p>\n      Render pages with mock data. This makes it easy to build and review page states without\n      needing to navigate to them in your app. Here are some handy patterns for managing page data\n      in Storybook:\n    </p>\n    <ul>\n      <li>\n        Use a higher-level connected component. Storybook helps you compose such data from the\n        \"args\" of child component stories\n      </li>\n      <li>\n        Assemble data in the page component from your services. You can mock these services out\n        using Storybook.\n      </li>\n    </ul>\n    <p>\n      Get a guided tutorial on component-driven development at\n      <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\n        Storybook tutorials\n      </a>\n      . Read more in the\n      <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\n      .\n    </p>\n    <div class=\"tip-wrapper\">\n      <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n      <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n        <g fill=\"none\" fillRule=\"evenodd\">\n          <path\n            d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n            id=\"a\"\n            fill=\"#999\"\n          />\n        </g>\n      </svg>\n      Viewports addon in the toolbar\n    </div>\n  </section>\n</article>`,\n  styleUrls: ['./page.css'],\n})\nexport class PageComponent {\n  user: User | null = null;\n\n  doLogout() {\n    this.user = null;\n  }\n\n  doLogin() {\n    this.user = { name: 'Jane Doe' };\n  }\n\n  doCreateAccount() {\n    this.user = { name: 'Jane Doe' };\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".storybook-page {\n  margin: 0 auto;\n  padding: 48px 20px;\n  max-width: 600px;\n  color: #333;\n  font-size: 14px;\n  line-height: 24px;\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n}\n\n.storybook-page h2 {\n  display: inline-block;\n  vertical-align: top;\n  margin: 0 0 4px;\n  font-weight: 700;\n  font-size: 32px;\n  line-height: 1;\n}\n\n.storybook-page p {\n  margin: 1em 0;\n}\n\n.storybook-page a {\n  color: inherit;\n}\n\n.storybook-page ul {\n  margin: 1em 0;\n  padding-left: 30px;\n}\n\n.storybook-page li {\n  margin-bottom: 8px;\n}\n\n.storybook-page .tip {\n  display: inline-block;\n  vertical-align: top;\n  margin-right: 10px;\n  border-radius: 1em;\n  background: #e7fdd8;\n  padding: 4px 12px;\n  color: #357a14;\n  font-weight: 700;\n  font-size: 11px;\n  line-height: 12px;\n}\n\n.storybook-page .tip-wrapper {\n  margin-top: 40px;\n  margin-bottom: 40px;\n  font-size: 13px;\n  line-height: 20px;\n}\n\n.storybook-page .tip-wrapper svg {\n  display: inline-block;\n  vertical-align: top;\n  margin-top: 3px;\n  margin-right: 4px;\n  width: 12px;\n  height: 12px;\n}\n\n.storybook-page .tip-wrapper svg path {\n  fill: #1ea7fd;\n}\n",
+                    "styleUrl": "./page.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": []
+        }
+    ],
+    "modules": [],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "angularApp",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/server.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "unknown",
+                "defaultValue": "new AngularNodeAppEngine()"
+            },
+            {
+                "name": "app",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/server.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "unknown",
+                "defaultValue": "express()"
+            },
+            {
+                "name": "appConfig",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/app.config.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "ApplicationConfig",
+                "defaultValue": "{\r\n  providers: [\r\n    provideBrowserGlobalErrorListeners(),\r\n    provideRouter(routes), provideClientHydration(withEventReplay())\r\n  ]\r\n}"
+            },
+            {
+                "name": "bootstrap",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/main.server.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "unknown",
+                "defaultValue": "(context: BootstrapContext) =>\r\n    bootstrapApplication(App, config, context)"
+            },
+            {
+                "name": "browserDistFolder",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/server.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "unknown",
+                "defaultValue": "join(import.meta.dirname, '../browser')"
+            },
+            {
+                "name": "config",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/app.config.server.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "unknown",
+                "defaultValue": "mergeApplicationConfig(appConfig, serverConfig)"
+            },
+            {
+                "name": "reqHandler",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/server.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "unknown",
+                "defaultValue": "createNodeRequestHandler(app)",
+                "rawdescription": "Request handler used by the Angular CLI (for dev-server and during build) or Firebase Cloud Functions.",
+                "description": "<p>Request handler used by the Angular CLI (for dev-server and during build) or Firebase Cloud Functions.</p>\n"
+            },
+            {
+                "name": "routes",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/app.routes.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Routes",
+                "defaultValue": "[\r\n    {\r\n        path: '',\r\n        loadComponent: () => \"import('./features/home/home.component').then(m => m.HomeComponent)\"\r\n    },\r\n    {\r\n        path: 'consultorias',\r\n        loadComponent: () => \"import('./features/consultorias/consultorias.component').then(m => m.ConsultoriasComponent)\"\r\n    },\r\n    {\r\n        path: 'empathetic-actions',\r\n        loadComponent: () => \"import('./features/empathetic-actions/empathetic-actions.component').then(m => m.EmpatheticActionsComponent)\"\r\n    },\r\n    {\r\n        path: '**', // Fallback\r\n        redirectTo: ''\r\n    }\r\n]"
+            },
+            {
+                "name": "serverConfig",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/app.config.server.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "ApplicationConfig",
+                "defaultValue": "{\r\n  providers: [\r\n    provideServerRendering(withRoutes(serverRoutes))\r\n  ]\r\n}"
+            },
+            {
+                "name": "serverRoutes",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/app.routes.server.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "ServerRoute[]",
+                "defaultValue": "[\r\n  {\r\n    path: '**',\r\n    renderMode: RenderMode.Prerender\r\n  }\r\n]"
+            }
+        ],
+        "functions": [],
+        "typealiases": [],
+        "enumerations": [],
+        "groupedVariables": {
+            "src/server.ts": [
+                {
+                    "name": "angularApp",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/server.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "defaultValue": "new AngularNodeAppEngine()"
+                },
+                {
+                    "name": "app",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/server.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "defaultValue": "express()"
+                },
+                {
+                    "name": "browserDistFolder",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/server.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "defaultValue": "join(import.meta.dirname, '../browser')"
+                },
+                {
+                    "name": "reqHandler",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/server.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "defaultValue": "createNodeRequestHandler(app)",
+                    "rawdescription": "Request handler used by the Angular CLI (for dev-server and during build) or Firebase Cloud Functions.",
+                    "description": "<p>Request handler used by the Angular CLI (for dev-server and during build) or Firebase Cloud Functions.</p>\n"
+                }
+            ],
+            "src/app/app.config.ts": [
+                {
+                    "name": "appConfig",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/app.config.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ApplicationConfig",
+                    "defaultValue": "{\r\n  providers: [\r\n    provideBrowserGlobalErrorListeners(),\r\n    provideRouter(routes), provideClientHydration(withEventReplay())\r\n  ]\r\n}"
+                }
+            ],
+            "src/main.server.ts": [
+                {
+                    "name": "bootstrap",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/main.server.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "defaultValue": "(context: BootstrapContext) =>\r\n    bootstrapApplication(App, config, context)"
+                }
+            ],
+            "src/app/app.config.server.ts": [
+                {
+                    "name": "config",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/app.config.server.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "defaultValue": "mergeApplicationConfig(appConfig, serverConfig)"
+                },
+                {
+                    "name": "serverConfig",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/app.config.server.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ApplicationConfig",
+                    "defaultValue": "{\r\n  providers: [\r\n    provideServerRendering(withRoutes(serverRoutes))\r\n  ]\r\n}"
+                }
+            ],
+            "src/app/app.routes.ts": [
+                {
+                    "name": "routes",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/app.routes.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Routes",
+                    "defaultValue": "[\r\n    {\r\n        path: '',\r\n        loadComponent: () => \"import('./features/home/home.component').then(m => m.HomeComponent)\"\r\n    },\r\n    {\r\n        path: 'consultorias',\r\n        loadComponent: () => \"import('./features/consultorias/consultorias.component').then(m => m.ConsultoriasComponent)\"\r\n    },\r\n    {\r\n        path: 'empathetic-actions',\r\n        loadComponent: () => \"import('./features/empathetic-actions/empathetic-actions.component').then(m => m.EmpatheticActionsComponent)\"\r\n    },\r\n    {\r\n        path: '**', // Fallback\r\n        redirectTo: ''\r\n    }\r\n]"
+                }
+            ],
+            "src/app/app.routes.server.ts": [
+                {
+                    "name": "serverRoutes",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/app.routes.server.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ServerRoute[]",
+                    "defaultValue": "[\r\n  {\r\n    path: '**',\r\n    renderMode: RenderMode.Prerender\r\n  }\r\n]"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {}
+    },
+    "routes": {
+        "name": "<root>",
+        "kind": "module",
+        "children": [
+            {
+                "name": "consultorias",
+                "kind": "route-path",
+                "filename": "src/app/app.routes.ts"
+            },
+            {
+                "name": "empathetic-actions",
+                "kind": "route-path",
+                "filename": "src/app/app.routes.ts"
+            },
+            {
+                "name": "**",
+                "kind": "route-path",
+                "filename": "src/app/app.routes.ts"
+            }
+        ]
+    },
+    "coverage": {
+        "count": 9,
+        "status": "low",
+        "files": [
+            {
+                "filePath": "src/app/app.config.server.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "config",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/app.config.server.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "serverConfig",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/app.config.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "appConfig",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/app.routes.server.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "serverRoutes",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/app.routes.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "routes",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/app.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "App",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/features/consultorias/consultorias.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ConsultoriasComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/features/empathetic-actions/empathetic-actions.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "EmpatheticActionsComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/features/home/home.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "HomeComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/components/footer/footer.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FooterComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/components/header/header.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "HeaderComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/main.server.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "bootstrap",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/server.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "angularApp",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/server.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "app",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/server.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "browserDistFolder",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/server.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "reqHandler",
+                "coveragePercent": 100,
+                "coverageCount": "1/1",
+                "status": "very-good"
+            },
+            {
+                "filePath": "src/stories/button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ButtonComponent",
+                "coveragePercent": 83,
+                "coverageCount": "5/6",
+                "status": "very-good"
+            },
+            {
+                "filePath": "src/stories/header.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "HeaderComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/page.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "PageComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/user.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "User",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            }
+        ]
+    }
+}

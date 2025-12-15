@@ -26,3 +26,14 @@ Para iniciar un servidor de desarrollo local, ejecuta:
 
 ```bash
 ng serve
+```
+
+### Storybook
+
+Para visualizar los componentes en un entorno aislado con Storybook, ejecuta:
+
+```bash
+npm run storybook
+```
+
+Esto te permitirá interactuar y probar los componentes de forma independiente.
