@@ -1,24 +1,14 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, Inject } from '@angular/core';
+import { CommonModule, DOCUMENT } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
-    selector: 'app-header',
-    standalone: true,
-    imports: [CommonModule, RouterLink, RouterLinkActive],
-    template: `
+  selector: 'app-header',
+  standalone: true,
+  imports: [CommonModule, RouterLink, RouterLinkActive],
+  template: `
     <div class="navbar bg-base-100/90 backdrop-blur-md sticky top-0 z-50 border-b border-base-200">
       <div class="navbar-start">
-        <div class="dropdown">
-          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-          </div>
-          <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-            <li><a routerLink="/" routerLinkActive="text-primary" [routerLinkActiveOptions]="{exact: true}">Nosotros</a></li>
-            <li><a routerLink="/consultorias" routerLinkActive="text-primary">Consultorías</a></li>
-            <li><a routerLink="/empathetic-actions" routerLinkActive="text-primary">Acciones Empáticas</a></li>
-          </ul>
-        </div>
         <a routerLink="/" class="btn btn-ghost text-xl font-bold">
             <svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="mr-2">
                 <defs>
@@ -55,11 +45,53 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
         </ul>
       </div>
       <div class="navbar-end">
-        <a class="btn btn-primary text-white rounded-full px-6 shadow-lg hover:shadow-primary/50 transition-all duration-300 transform hover:scale-105">
+        <a class="btn btn-primary bg-gradient-to-r from-secondary to-primary text-white rounded-full px-6 shadow-lg hover:shadow-primary/50 transition-all duration-300 transform hover:scale-105 border-none hidden lg:flex">
           Quiero una cotización
         </a>
+        <div class="lg:hidden">
+          <button (click)="toggleMenu()" class="btn btn-ghost">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+          </button>
+        </div>
       </div>
     </div>
-  `
+
+    <!-- Mobile Menu -->
+    <div class="fixed top-0 left-0 w-full h-full bg-base-100/95 shadow-lg z-50 transform transition-transform duration-300 ease-in-out"
+         [class.translate-x-0]="isMenuOpen"
+         [class.-translate-x-full]="!isMenuOpen">
+      <div class="p-4 flex flex-col h-full justify-center items-center">
+        <button (click)="toggleMenu()" class="btn btn-ghost absolute top-4 right-4 z-50">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <ul class="menu flex-grow justify-center items-center text-2xl font-bold">
+          <li><a routerLink="/" routerLinkActive="text-primary" [routerLinkActiveOptions]="{exact: true}" (click)="toggleMenu()">Nosotros</a></li>
+          <li><a routerLink="/consultorias" routerLinkActive="text-primary" (click)="toggleMenu()">Consultorías</a></li>
+          <li><a routerLink="/empathetic-actions" routerLinkActive="text-primary" (click)="toggleMenu()">Acciones Empáticas</a></li>
+          <li><a class="btn btn-primary bg-gradient-to-r from-secondary to-primary text-white rounded-full px-6 shadow-lg hover:shadow-primary/50 transition-all duration-300 transform hover:scale-105 border-none mt-4 text-2xl font-bold" (click)="toggleMenu()">
+            Quiero una cotización
+          </a></li>
+        </ul>
+      </div>
+    </div>
+    <div *ngIf="isMenuOpen" (click)="toggleMenu()" class="fixed inset-0 bg-black opacity-50 z-40"></div>
+  `,
 })
-export class HeaderComponent { }
+export class HeaderComponent {
+  isMenuOpen = false;
+
+  constructor(@Inject(DOCUMENT) private document: Document) { }
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+    if (this.isMenuOpen) {
+      this.document.body.classList.add('overflow-hidden');
+      this.document.documentElement.classList.add('overflow-hidden');
+    } else {
+      this.document.body.classList.remove('overflow-hidden');
+      this.document.documentElement.classList.remove('overflow-hidden');
+    }
+  }
+}
