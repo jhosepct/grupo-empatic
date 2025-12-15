@@ -9,8 +9,8 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   template: `
     <div class="navbar bg-base-100/90 backdrop-blur-md sticky top-0 z-50 border-b border-base-200">
       <div class="navbar-start">
-        <a routerLink="/" class="btn btn-ghost text-xl font-bold">
-            <svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="mr-2">
+        <a routerLink="/" class="btn btn-ghost text-xl font-bold" aria-label="Grupo Empatic Home">
+            <svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="mr-2" aria-hidden="true">
                 <defs>
                     <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
                         <stop offset="0%" stop-color="#FF6B6B" />
@@ -39,18 +39,18 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
       </div>
       <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1 font-medium">
-          <li><a routerLink="/" routerLinkActive="text-primary !bg-transparent" [routerLinkActiveOptions]="{exact: true}">Nosotros</a></li>
-          <li><a routerLink="/consultorias" routerLinkActive="text-primary !bg-transparent">Consultorías</a></li>
-          <li><a routerLink="/empathetic-actions" routerLinkActive="text-primary !bg-transparent">Acciones Empáticas</a></li>
+          <li><a routerLink="/" routerLinkActive="text-primary !bg-transparent" [routerLinkActiveOptions]="{exact: true}" aria-label="Nosotros">Nosotros</a></li>
+          <li><a routerLink="/consultorias" routerLinkActive="text-primary !bg-transparent" aria-label="Consultorías">Consultorías</a></li>
+          <li><a routerLink="/empathetic-actions" routerLinkActive="text-primary !bg-transparent" aria-label="Acciones Empáticas">Acciones Empáticas</a></li>
         </ul>
       </div>
       <div class="navbar-end">
-        <a class="btn btn-primary bg-gradient-to-r from-secondary to-primary text-white rounded-full px-6 shadow-lg hover:shadow-primary/50 transition-all duration-300 transform hover:scale-105 border-none hidden lg:flex">
+        <a class="btn btn-primary bg-gradient-to-r from-secondary to-primary text-white rounded-full px-6 shadow-lg hover:shadow-primary/50 transition-all duration-300 transform hover:scale-105 border-none hidden lg:flex" aria-label="Quiero una cotización">
           Quiero una cotización
         </a>
         <div class="lg:hidden">
-          <button (click)="toggleMenu()" class="btn btn-ghost">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+          <button (click)="toggleMenu()" class="btn btn-ghost" aria-label="Open menu">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
           </button>
         </div>
       </div>
@@ -61,22 +61,22 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
          [class.translate-x-0]="isMenuOpen"
          [class.-translate-x-full]="!isMenuOpen">
       <div class="p-4 flex flex-col h-full justify-center items-center">
-        <button (click)="toggleMenu()" class="btn btn-ghost absolute top-4 right-4 z-50">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <button (click)="toggleMenu()" class="btn btn-ghost absolute top-4 right-4 z-50" aria-label="Close menu">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
         </button>
         <ul class="menu flex-grow justify-center items-center text-2xl font-bold">
-          <li><a routerLink="/" routerLinkActive="text-primary" [routerLinkActiveOptions]="{exact: true}" (click)="toggleMenu()">Nosotros</a></li>
-          <li><a routerLink="/consultorias" routerLinkActive="text-primary" (click)="toggleMenu()">Consultorías</a></li>
-          <li><a routerLink="/empathetic-actions" routerLinkActive="text-primary" (click)="toggleMenu()">Acciones Empáticas</a></li>
-          <li><a class="btn btn-primary bg-gradient-to-r from-secondary to-primary text-white rounded-full px-6 shadow-lg hover:shadow-primary/50 transition-all duration-300 transform hover:scale-105 border-none mt-4 text-2xl font-bold" (click)="toggleMenu()">
+          <li><a routerLink="/" routerLinkActive="text-primary" [routerLinkActiveOptions]="{exact: true}" (click)="toggleMenu()" aria-label="Nosotros">Nosotros</a></li>
+          <li><a routerLink="/consultorias" routerLinkActive="text-primary" (click)="toggleMenu()" aria-label="Consultorías">Consultorías</a></li>
+          <li><a routerLink="/empathetic-actions" routerLinkActive="text-primary" (click)="toggleMenu()" aria-label="Acciones Empáticas">Acciones Empáticas</a></li>
+          <li><a class="btn btn-primary bg-gradient-to-r from-secondary to-primary text-white rounded-full px-6 shadow-lg hover:shadow-primary/50 transition-all duration-300 transform hover:scale-105 border-none mt-4 text-2xl font-bold" (click)="toggleMenu()" aria-label="Quiero una cotización">
             Quiero una cotización
           </a></li>
         </ul>
       </div>
     </div>
-    <div *ngIf="isMenuOpen" (click)="toggleMenu()" class="fixed inset-0 bg-black opacity-50 z-40"></div>
+    <div *ngIf="isMenuOpen" (click)="toggleMenu()" class="fixed inset-0 bg-black opacity-50 z-40" aria-hidden="true"></div>
   `,
 })
 export class HeaderComponent {
