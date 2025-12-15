@@ -1,59 +1,28 @@
-# AccionesEmpaticas
+# 🌍 Grupo EMPATIC - Consultora de Impacto Social
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.3.
+Este es el repositorio del sitio web oficial de **Grupo EMPATIC**, una consultora de impacto social que ofrece soluciones estratégicas en temas de sostenibilidad, tecnología y financiamiento. El objetivo de este proyecto es proveer una plataforma moderna y profesional que comunique la misión, valores, servicios y el impacto de la consultora.
 
-## Development server
+El proyecto fue generado utilizando **[Angular CLI](https://github.com/angular/angular-cli) versión 21.0.3**.
 
-To start a local development server, run:
+## ✨ Características Principales
+
+* **Visión Integral:** Presenta los tres servicios clave de la consultora: **Empatic Sostenibilidad**, **Empatic Financiamiento** y **Empatic Tecnología**.
+* **Plataforma de Impacto:** Incluye una sección dedicada a **Acciones Empáticas**, la plataforma de impacto social del grupo que promueve el desarrollo integral y el voluntariado.
+* **Diseño Moderno:** Implementado con **Tailwind CSS** para un diseño limpio, altamente *responsive* y modular.
+* **Arquitectura Angular:** Construido con *Standalone Components* y *Lazy Loading* para optimizar el rendimiento y la mantenibilidad.
+* **Header Modernizado:** Cabecera completamente *responsive* con un menú móvil de pantalla completa, mejorando la UX en dispositivos pequeños.
+
+## 🛠️ Entorno de Desarrollo
+
+### Requisitos Previos
+
+Asegúrate de tener instalado:
+* [Node.js](https://nodejs.org/) (versión recomendada LTS)
+* [Angular CLI](https://angular.dev/tools/cli)
+
+### Servidor de Desarrollo
+
+Para iniciar un servidor de desarrollo local, ejecuta:
 
 ```bash
 ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
